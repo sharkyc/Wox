@@ -91,7 +91,7 @@
                     <TextBlock Text="{DynamicResource language}" />
                     <ComboBox Margin="10 0 0 0" Width="120"
                               ItemsSource="{Binding Languages}" SelectedValue="{Binding Language}"
-                              DisplayMemberPath="Display" SelectedValuePath="LanguageCode" />
+                              DisplayMemberPath="Display" SelectedValuePath="LanguageCode" SelectionChanged="ComboBox_SelectionChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="10">
                     <TextBlock Text="{DynamicResource maxShowResults}" />

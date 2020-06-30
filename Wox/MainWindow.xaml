@@ -89,6 +89,7 @@
                         </ContextMenu>
                     </TextBox.ContextMenu>
                 </TextBox>
+                <Label Content="SHA.VC" HorizontalAlignment="Center" Margin="334,6,327,5.4" VerticalAlignment="Center" FontSize="20" Opacity="0.8" Foreground="#FFE57F56" FontWeight="Bold" Width="91"/>
             </Grid>
             <Line x:Name="ProgressBar" HorizontalAlignment="Right"
                   Style="{DynamicResource PendingLineStyle}" Visibility="{Binding ProgressBarVisibility, Mode=TwoWay}" 

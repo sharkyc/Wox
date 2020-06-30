@@ -30,8 +30,9 @@ namespace Wox.Core.Resource
         {
             List<Language> languages = new List<Language>
             {
-                English,
+                //修改中文到默认第一个
                 Chinese,
+                English,
                 Chinese_TW,
                 Spanish,
                 Hebrew,

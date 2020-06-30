@@ -285,5 +285,10 @@ namespace Wox
         {
             Close();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

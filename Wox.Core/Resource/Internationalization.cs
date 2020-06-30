@@ -18,6 +18,7 @@ namespace Wox.Core.Resource
         public Settings Settings { get; set; }
         private const string Folder = "Languages";
         private const string DefaultFile = "en.xaml";
+        //默认语言文件设置
         private const string Extension = ".xaml";
         private readonly List<string> _languageDirectories = new List<string>();
         private readonly List<ResourceDictionary> _oldResources = new List<ResourceDictionary>();
@@ -29,6 +30,7 @@ namespace Wox.Core.Resource
             Settings = Settings.Instance;
             AddPluginLanguageDirectories();
             LoadDefaultLanguage();
+            //载入默认语言文件，修改语言到中文
             // we don't want to load /Languages/en.xaml twice
             // so add wox language directory after load plugin language files
             AddWoxLanguageDirectory();
@@ -63,7 +65,7 @@ namespace Wox.Core.Resource
 
         private void LoadDefaultLanguage()
         {
-            LoadLanguage(AvailableLanguages.English);
+            LoadLanguage(AvailableLanguages.Chinese);//修改默认语言到中文
             _oldResources.Clear();
         }
 
@@ -114,7 +116,7 @@ namespace Wox.Core.Resource
             if (languageToSet != AvailableLanguages.Chinese && languageToSet != AvailableLanguages.Chinese_TW)
                 return false;
 
-            if (MessageBox.Show("Do you want to turn on search with Pinyin?", string.Empty, MessageBoxButton.YesNo) == MessageBoxResult.No)
+            if (MessageBox.Show("是否开启拼音搜索？", string.Empty, MessageBoxButton.YesNo) == MessageBoxResult.No)
                 return false;
 
             return true;
